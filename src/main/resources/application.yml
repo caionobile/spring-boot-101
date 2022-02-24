@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    initialization-mode: always
+    url: jdbc:postgresql://${DB_HOST}:${DB_PORT}/postgres?user=${DB_USER}&password=${DB_PASSWORD}
+    hikari:
+      pool-name: expenses
+      maximum-pool-size: 160
+      minimum-idle: 50
+      idle-timeout: 60000
+      max-lifetime: 60000
+      connection-timeout: 10000
